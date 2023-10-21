@@ -10,8 +10,8 @@ if [ -z "$1" ]; then
 fi
 
 # Source directory and destination directory
-source_dir="/Users/ulysses/Library/Group Containers/group.com.apple.VoiceMemos.shared/Recordings"
-destination_dir="/Users/ulysses/transcriptions"
+source_dir="/Users/USERNAME/Library/Group Containers/group.com.apple.VoiceMemos.shared/Recordings"
+destination_dir="/Users/USERNAME/transcriptions"
 
 # Date parameter provided by the user
 cutoff_date="$1"
@@ -30,7 +30,7 @@ do
     ffmpeg -i "$destination_dir/$filename" -ar 16000 -ac 1 -c:a pcm_s16le "$destination_dir/$filename_noext.wav"
 
     # Run the whisper-c command and save output to FILENAME.txt
-    /Users/ulysses/whisper-c/main -m /Users/ulysses/whisper-c/models/ggml-medium.en.bin -f "$destination_dir/$filename_noext.wav" > "$destination_dir/$filename_noext.txt"
+    /Users/USERNAME/whisper-c/main -m /Users/USERNAME/whisper-c/models/ggml-medium.en.bin -f "$destination_dir/$filename_noext.wav" > "$destination_dir/$filename_noext.txt"
 
     # Optional: Delete non .txt files from the destination directory
     find "$destination_dir" -type f ! -name '*.txt' ! -name '*.sh' -delete
