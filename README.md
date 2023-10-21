@@ -9,12 +9,14 @@ git clone https://github.com/ggerganov/whisper.cpp.git
 make
 bash ./models/download-ggml-model.sh base.en
 bash ./models/download-ggml-model.sh medium.en
-ffmpeg -i audio.m4a -ar 16000 -ac 1 -c:a pcm_s16le audio.wav
 ```
 
-2. You must edit the folder names in your script and make it executable.
+You must also have the free ffmpeg installed.  Web search for how to do that - it's easy.
 
-3. Ensure all folders actually exist on your system before running.
+2. Replace USERNAME (appears 4 times) with your actual username
+
+3. Ensure all folders actually exist on your system before running.  And of course, make the script
+   executable.  (chmod +x transcribe.sh)
 
 # Example usage:
 ```
