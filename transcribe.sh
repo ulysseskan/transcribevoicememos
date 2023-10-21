@@ -32,8 +32,8 @@ do
     # Run the whisper-c command and save output to FILENAME.txt
     /Users/USERNAME/whisper-c/main -m /Users/USERNAME/whisper-c/models/ggml-medium.en.bin -f "$destination_dir/$filename_noext.wav" > "$destination_dir/$filename_noext.txt"
 
-    # Optional: Delete non .txt files from the destination directory
-    find "$destination_dir" -type f ! -name '*.txt' ! -name '*.sh' -delete
+    # Optional: Delete non .txt files from the destination directory - not always reliable
+    # find "$destination_dir" -type f ! -name '*.txt' ! -name '*.sh' -delete
 
 done
 
