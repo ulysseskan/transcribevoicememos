@@ -17,9 +17,8 @@ ffmpeg -i audio.m4a -ar 16000 -ac 1 -c:a pcm_s16le audio.wav
 3. Ensure all folders actually exist on your system before running.
 
 # Example usage:
-# Transcribe voice memos after 2023-10-20:
 ```
-./transcribe.sh 2023-10-20
+./transcribe.sh 2023-10-20 # Transcribe voice memos after 2023-10-20
 ```
 
-MIT License, feel free to modify / make better as you wish.
+MIT License / feel free to modify / make better as you wish
